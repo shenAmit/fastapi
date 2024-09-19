@@ -1,4 +1,3 @@
-# models.py
 
 from sqlalchemy import Column, Integer, String, Text, TIMESTAMP
 from sqlalchemy.dialects.mysql import TINYINT, INTEGER

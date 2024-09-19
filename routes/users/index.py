@@ -1,4 +1,3 @@
-# views/user_view.py
 
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
@@ -14,9 +13,9 @@ from database import get_db
 router = APIRouter()
 
 @router.get("/users")
-def read_users(db: Session = Depends(get_db)):
-    users = get_all_users(db)
-    return users
+def read_users(item: int = None,page: int = 1,db: Session = Depends(get_db)):
+    users = get_all_users(db,item,page)
+    return {'status':True,"msg":"Data get successfully","data":users}
 
 @router.get("/users/{user_id}")
 def read_user(user_id: int, db: Session = Depends(get_db)):
