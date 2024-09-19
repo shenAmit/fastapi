@@ -17,7 +17,7 @@ def create_user(db: Session, user: dict):
         view_encrypt=user.get('view_encrypt', 1),
         name=user.get('name'),
         email=user.get('email'),
-        password=user.get('password'),  # You should hash this password in a real application
+        password=user.get('password'),  
         category_id=user.get('category_id'),
         branch_id=user.get('branch_id', 0),
         department_id=user.get('department_id'),
