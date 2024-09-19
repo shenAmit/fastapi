@@ -1,7 +1,7 @@
 # main.py
 
 from fastapi import FastAPI
-from views.users.index import router as user_router
+from routes.users.index import router as user_router
 import models
 from database import engine
 
